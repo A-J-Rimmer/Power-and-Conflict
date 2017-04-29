@@ -1,0 +1,85 @@
+html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    background-image: url("englishBackground.jpg");
+    background-repeat: repeat;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+}
+span:hover {
+    color: blue;
+    cursor: pointer;
+}
+
+#wrapper {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    height: 90%;
+    position: relative;
+    top: 5%;
+    background-color: white;
+}
+
+td {
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+
+#title {
+    text-align: center;
+    padding-top: 10px;
+}
+
+#stuff {
+    display: inline-block;
+    overflow: auto;
+    height: 100%;
+    width: 100%;
+}
+#commentary {
+    display: none;
+}
+
+#comments {
+    text-align: center;
+    margin: 5%;
+}
+
+h3 {
+    text-align: center;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+    text-align: center;
+    margin: 5%;
+    display: block;
+}
+
+a:hover {
+    color: gray;
+    font-weight: bolder;
+}
+
+h1 {
+    text-align: center;
+}
+
+#return {
+    display: block;
+    position: absolute;
+    font-size: 30px;
+    top: 2%;
+    left: 2%;
+}
