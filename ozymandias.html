@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Power and Conflict</title>
+        <link rel="stylesheet" href="style.css" type="text/css" />
+        <script type="text/javascript" src="interface.js"></script>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    </head>
+    <body onload="run()">
+        <div id="wrapper">
+            <form action="index.html">
+    <input id="return" type="submit" value="HOME" />
+</form>
+            <div id="stuff">
+            <h1 id="title">Ozymandias</h1>
+            <h3>Percy Bysshe Shelley</h3>
+            <br>
+            <table>
+<tr><td id="filler1"></td>|<td id="content"><p><span id="quote1">I met a traveller</span> from an antique land,<br>
+Who said: 'Two <span id="quote2">vast and trunkless legs of stone<br> 
+Stand in the desert</span>. Near them, on the sand,<br> 
+<span id="quote4">Half sunk a shattered visage</span> lies, whose frown,<br> 
+And wrinkled lip, and sneer of <span id="quote5">cold command</span>,<br> 
+Tell that its sculptor well those passions read<br> 
+Which yet survive, stamped on these lifeless things,<br> 
+The hand that <span id="quote6">mocked</span> them, and the heart that fed;<br> 
+And on the pedestal, these words appear:<br> 
+My name is Ozymandias, King of Kings;<br> 
+<span id="quote7">Look on my Works, ye Mighty, and despair!<br> 
+Nothing beside remains</span>. Round the decay<br> 
+Of that <span id="quote8">colossal Wreck</span>, boundless and bare<br> 
+          The <spanid="quote9">lone and level</span> sands <span id="quote10">stretch far away</span>.'</p><br><br><br>
+          </td><td id="fill2"></td></tr>
+          </table>
+          <h3 id="chosenQuote"></h3>
+          <p id="comments"></p>
+
+          </div>
+          </div>
+          <div id="commentary">
+             <p id="quote1c">In the poem, the main subject (i.e. the statue) is ‘second hand’;
+             it’s not the poet or the persona of the poem speaking about what they’ve seen,
+             it’s an unnamed ‘traveller’. This implies insignificance, because the poet himself
+             didn’t feel like it was necessary to go and see the statue for himself. As the
+             statue was supposedly a grand statement of Ozymandias’ power, this undermines the statue,
+             showing the insignificance of human power against the power of nature.</p>
+             
+             <p id="quote2c">This is an example of sibilance, which emulates the sound of the desert 
+             sand moving. The effect continues throughout the poem (“passions” and “lifeless”, 
+             for example, have an emphasis on the ‘ess’ sound), making the sound of the desert ever 
+             present. This suggests that although the statue has decayed, the desert outlasts it, 
+             which supports the theme of the power of nature.</p>
+            
+             <p id="quote4c">This provides the image of decay, adding to the idea that everything will
+             eventually crumble, regardless of its strength.</p>
+             
+             <p id="quote5c">This is an example of plosive alliteration, which creates a harsh sound,
+             suggesting Ozymandias was cruel. As a result, the reader feels no sympathy for Ozymandias, 
+             which can also be linked to Ozymandias being a metaphor for the current king when Shelley
+             wrote the poem (King George III).</p>
+             
+             <p id="quote6c">This has an ambiguous meaning; it can be interpreted as “make a replica
+             or imitation of something” or to “Tease or laugh at in a scornful or contemptuous manner”
+             (Oxford Dictionaries). This suggests the sculptor has not just made the statue, but they’ve
+             created it in a way that suggests Ozymandias was not the beloved ruler he thought he was 
+             (as suggested by “wrinkled lip” and “sneer” which are both negative suggestions about his 
+             character). Consequently, the pride of Ozymandias is undermined, making him seem arrogant.</p>
+             
+             <p id="quote7c">This line creates juxtaposition, as it starts with the image of power/wealth
+             etc. but ends with the image of ‘nothing’. This contrast between what Ozymandias thought would
+             happen (i.e. that visitors would ‘despair’ because he had so much power) and what actually 
+             happened (his empire has disappeared) is an example of situational irony; the statue is meant
+             to be a statement of his greatness, but now it just makes him look weak and insignificant 
+             compared to nature and time.</p>
+             
+             <p id="quote8c">This could be described as an oxymoron, as ‘colossal’ implies greatness;
+             it would have taken a huge amount of time and materials to create a ‘colossal’ statue, 
+             yet ‘wreck’ implies decay. The effect of this is to add to the idea that the power of nature
+             has won over the power of humans.</p>
+             
+             <p id="quote9c">Here, alliteration emphasises the fact that the sand is all that surrounds 
+             the statue, with ‘level’ having the connotation of consistency, showing the sand has and will
+             outlast the statue.</p>
+             
+             <p id="quote10c">This gives the idea of the sand being infinite, but this is impossible, 
+             it suggests the sand is a metaphor for time. Ozymandias’ statue has not just been eroded 
+             by the sand, but by the passage of time itself.</p>
+             </div>
+          <script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
+<script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<script>
+    $(document).ready(function() {
+    $("span").click(function() {
+     var chosenId = $(this).attr('id');
+     var middleString = document.getElementById(chosenId).innerHTML;
+     document.getElementById("chosenQuote").innerHTML='"'+middleString+'"';
+     var requiredComment = chosenId + "c";
+     var requiredCommentText = document.getElementById(requiredComment).innerHTML;
+     document.getElementById("comments").innerHTML=requiredCommentText;
+    });
+    });
+
+</script>
+</body>
+</html>
