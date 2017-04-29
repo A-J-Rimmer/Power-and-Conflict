@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Power and Conflict</title>
+        <link rel="stylesheet" href="style.css" type="text/css" />
+        <script type="text/javascript" src="interface.js"></script>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    </head>
+    <body onload="run()">
+        <div id="wrapper">
+            <form action="index.html">
+    <input id="return" type="submit" value="HOME" />
+</form>
+            <div id="stuff">
+            <h1 id="title">London</h1>
+            <h3>William Blake</h3>
+            <br>
+            <table>
+<tr><td id="filler1"></td><td id="content"><p>
+I <span id="quote1">wander</span> thro' each charter'dstreet,<br>
+Near where the <span id="quote2">charter'd</span> Thames does flow.<br>
+And mark in every face I meet<br>
+<span id="quote3">Marks of weakness, marks of woe</span>.<br>
+<br>
+<span id="quote4">In every</span> cry of every Man,<br>
+<span id="quote4p2">In every</span> Infants cry of fear,<br> 
+<span id="quote4p3">In every</span> voice: in every ban,<br> 
+The <span id="quote5">mind-forg'd manacles</span> I hear<br> 
+<br>
+How the Chimney-sweepers cry<br> 
+Every <span id="quote6">black'ning Church</span> appalls,<br>
+And the hapless Soldiers sigh<br> 
+<span id="quote7">Runs in blood down Palace walls</span><br>
+<br>
+But most thro' midnight streets I hear<br>
+How the youthful Harlots curse<br> 
+<span id="quote8">Blasts the new-born Infants tear</span><br> 
+And blights with plagues the <span id="quote9">Marriage hearse</span></p><br><br><br>
+          </td><td id="fill2"></td></tr>
+          </table>
+          <h3 id="chosenQuote"></h3>
+          <p id="comments"></p>
+
+          </div>
+          </div>
+          <div id="commentary">
+             <p id="quote1c">This choice of verb connotes a sense of aimlessness,
+             suggesting that the persona in the poem (Blake) and the people 
+             around him are repeatedly doing the same mindless activities every
+             day, without doing anything to stop their oppression.</p>
+             <p id="quote2c">‘Chartered’ shows how humans are trying to use
+             their power over nature, which is ironic (and therefore satirical
+             of human power) as a river can’t really be controlled. However,
+             Blake is suggesting that those in power are not just trying to 
+             oppress those they view as ‘inferior’, but nature itself, by 
+             turning it into a business. <br><br>
+             Between 1760 and 1820, 6 million acres of public land were chartered
+             (made private), which created profit for bankers etc. but put the 
+             poor at a disadvantage.</p>
+             <p id="quote3c">In this case, ‘marks’ has more than one meaning. 
+             Initially, it means to notice, but then it shifts to create imagery
+             of damage/suffering (‘marks of woe’). This also introduces the idea
+             that all the people living in the microcosm of London are marred in
+             some way because they are being controlled by those in power. <br><br>
+The different meanings also create a sense of insecurity and reflects Blake’s 
+unhappiness with the way London is changing, where the working class etc. are 
+ignored by the monarchy and the Church etc.</p>
+             <p id="quote4c">This is an example of anaphora, where the repetition
+             creates a sense of monotony to represent the way the people of 
+             London are living their lives. It also enforces the idea of 
+             everything being corrupted, and so contributes to Blake’s argument
+             for a revolution.</p>
+             <p id="quote5c">The use of alliteration emphasises the idea that 
+             all the limitations on people are caused by others holding power
+             over them. The imagery of ‘manacles’ would be shocking to an 18th
+             century audience, as they were used for criminals, implying that 
+             people were being treated like criminals purely because of their
+             social status.</p>
+             <p id="quote6c">This use of imagery criticises the industrial 
+             revolution, which meant that children as young as 6 were forced to
+             do jobs such as chimney sweeping. The Church was in fact responsible
+             for many of these children, and so the black has a double meaning,
+             as it represents soot, and also evil. Blake is suggesting that the
+             Church, which sees itself as good and holy, is in fact evil because
+             it is ignoring the needs of the poor.</p>
+             <p id="quote7c">Blake is criticising the monarchy for the 
+             oppression, and so he references the French Revolution with a 
+             hyperbole created at the time used when addressing the sheer volume
+             of French public executions. He is calling for a similar revolution
+             in Britain.</p>
+             <p id="quote8c">‘Blasts’ is plosive, indicating violence, which 
+             creates juxtaposition between the innocent infant and the violent
+             world they are born into. However, it is also suggesting that life
+             is corrupted from birth.</p>
+             <p id="quote9c">This oxymoron also serves to suggest that all good
+             things will become corrupted, and could also be a reference to the
+             Church, by implying the Church gives the illusion it is pure and 
+             omnibenevolent, but that really it is just as responsible for 
+             unhappiness and death as any other person in power.</p>
+             </div>
+          <script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
+<script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<script>
+    $(document).ready(function() {
+    $("span").click(function() {
+     var chosenId = $(this).attr('id');
+     if (chosenId == "quote4p2") {
+         chosenId = "quote4";
+     }
+     if (chosenId == "quote4p3") {
+         chosenId= "quote4";
+     }
+     var middleString = document.getElementById(chosenId).innerHTML;
+     document.getElementById("chosenQuote").innerHTML='"'+middleString+'"';
+     var requiredComment = chosenId + "c";
+     var requiredCommentText = document.getElementById(requiredComment).innerHTML;
+     document.getElementById("comments").innerHTML=requiredCommentText;
+    });
+    });
+    $(document).ready(function() {
+        $('#quote4').mouseenter(function() {
+            document.getElementById('quote4').style.color="blue";
+            document.getElementById('quote4p2').style.color="blue";
+            document.getElementById('quote4p3').style.color="blue";
+        });
+        $('#quote4').mouseleave(function() {
+            document.getElementById('quote4').style.color="black";
+            document.getElementById('quote4p2').style.color="black";
+            document.getElementById('quote4p3').style.color="black";
+        });
+         $('#quote4p2').mouseenter(function() {
+            document.getElementById('quote4').style.color="blue";
+            document.getElementById('quote4p2').style.color="blue";
+            document.getElementById('quote4p3').style.color="blue";
+        });
+        $('#quote4p2').mouseleave(function() {
+            document.getElementById('quote4').style.color="black";
+            document.getElementById('quote4p2').style.color="black";
+            document.getElementById('quote4p3').style.color="black";
+        });
+         $('#quote4p3').mouseenter(function() {
+            document.getElementById('quote4p3').style.color="blue";
+            document.getElementById('quote4p2').style.color="blue";
+            document.getElementById('quote4').style.color="blue";
+        });
+        $('#quote4p3').mouseleave(function() {
+            document.getElementById('quote4p3').style.color="black";
+            document.getElementById('quote4p2').style.color="black";
+            document.getElementById('quote4').style.color="black";
+        });
+        });
+
+</script>
+</body>
+</html>
