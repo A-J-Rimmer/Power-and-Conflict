@@ -83,3 +83,8 @@ h1 {
     top: 2%;
     left: 2%;
 }
+#changes {
+    width: 50%;
+    height: auto;
+    margin: auto;
+}
